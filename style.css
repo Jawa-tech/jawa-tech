@@ -1,0 +1,454 @@
+/* ====================
+        GLOBAL
+==================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #000 0%, #111 100%);
+  color: #eee;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  background-color: #111;
+}
+
+.navbar-brand span {
+  color: #ffc107;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* ====== SECTION TITLE ====== */
+.section-title {
+  color: #ffc107;
+  font-weight: 700;
+}
+
+/* ====== CONTACT SECTION ====== */
+#contact {
+  background: radial-gradient(circle at top left, #222, #000);
+}
+
+#contact p, #contact a {
+  font-size: 1.1rem;
+  color: #eee;
+}
+
+#contact a:hover {
+  color: #ffc107;
+}
+
+#contact .btn-warning {
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* ====== FAQ ====== */
+#faq {
+  background: linear-gradient(135deg, #111, #000);
+}
+
+.accordion-button {
+  background-color: #222;
+  color: #ffc107;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #333;
+  color: #ffc107;
+}
+
+.accordion-body {
+  background-color: #111;
+  color: #eee;
+}
+
+/* ====== MAP ====== */
+.map-responsive iframe {
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+}
+
+/* ====== FLOATING WHATSAPP ====== */
+.floating-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-wa img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 193, 7, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.floating-wa img:hover {
+  transform: scale(1.1);
+}
+
+/* ====================
+   Promo Slider
+==================== */
+.promo-slider {
+  background-color: #ffce00;  /* Kuning khas Jawa-Tech */
+  color: #000;               /* Teks hitam kontras */
+  overflow: hidden;
+  padding: 0.75rem 0;
+  position: relative;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 25s linear infinite;
+}
+
+.slider-item {
+  flex: none;
+  margin-right: 3rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ====================
+   HERO
+==================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+.bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: #ffd700;
+}
+.hero p {
+  color: #ccc;
+}
+
+/* ============================
+   FEATURES / PRICING / TESTIMONIALS
+============================ */
+
+/* Ikon fitur */
+.feature-icon {
+  font-size: 2.8rem;
+  display: inline-block;
+  color: #ffc107; /* warna kuning Jawa-Tech */
+  transition: 
+    transform 0.3s ease, 
+    color 0.3s ease;
+}
+
+.feature-icon:hover {
+  transform: scale(1.5) rotate(10deg);
+  color: #ffeb3b; /* kuning lebih terang saat hover */
+}
+
+section.features-section .text-center {
+  padding: 20px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+section.features-section .text-center:hover {
+  transform: scale(1.05);
+  border-color: #ffc107;
+}
+
+/* Keyframes pulse */
+@keyframes pulseIcon {
+  from {
+    box-shadow: 0 0 5px #ffc107;
+  }
+  to {
+    box-shadow: 0 0 20px #ffc107;
+  }
+}
+
+
+/* Background animasi section fitur */
+.bg-dark {
+  background: linear-gradient(-45deg, #000000, #222222, #333333, #000000);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.col-md-4 .text-center {
+  background: #111;
+  border-radius: 15px;
+  padding: 30px 20px;
+}
+.card-body h4 {
+  color: #ffc107;                /* Kuning terang */
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px #000;
+}
+.card-body p.text-muted {
+  color: #ddd !important;           /* Lebih terang daripada muted biasa */
+  font-size: 1rem;                  /* Bisa diperbesar jika mau */
+}
+
+.card-body ul li {
+  color: #eee;                      /* Lebih terang agar kontras */
+  font-size: 1rem;                  /* Atur ukuran */
+}
+
+.card-body ul li::before {
+  color: #ffc107;                   /* Ikon checklist kuning biar mencolok */
+}
+
+
+.pricing-section .card {
+  background: #111;
+  border: 2px solid #ffce00;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.pricing-section .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 206, 0, 0.3);
+}
+.pricing-section .card-title {
+  color: #ffce00 !important;
+  font-weight: bold;
+}
+.pricing-section p.text-muted {
+  color: #ccc !important;         /* Lebih terang dari muted default */
+  font-size: 1.1rem;              /* Perbesar sedikit supaya lebih enak dibaca */
+  line-height: 1.6;               /* Lebih lega antar baris */
+}
+
+#testimonials .card {
+  background: #222;
+  border: 2px solid #ffce00;
+  border-radius: 15px;
+}
+#testimonials p {
+  font-style: italic;
+  color: #f8e473;
+}
+#testimonials h6 {
+  color: #ffce00;
+}
+#testimonials small {
+  color: #ccc;
+}
+/* ====================
+   BUTTONS
+==================== */
+.btn-warning {
+  background: #ffc107;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-warning:hover {
+  background: #e6ac00;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 206, 0, 0.5);
+}
+.btn-outline-warning {
+  border-color: #ffce00;
+  color: #ffce00;
+}
+.btn-outline-warning:hover {
+  background: #ffce00;
+  color: #000;
+}
+
+/* ====================
+   AUTH (LOGIN / REGISTER)
+==================== */
+.auth-container {
+  background: linear-gradient(-45deg, #000, #333, #000, #333);
+  background-size: 400% 400%;
+  animation: backgroundMove 10s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes backgroundMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.auth-box {
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #ffc107;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  color: #ffc107;
+}
+.auth-box h2 {
+  color: #ffc107;
+}
+.auth-box input {
+  background: #1a1a1a;
+  color: #ffc107;
+  border: 1px solid #ffc10755;
+}
+
+/* ====================
+   FOOTER
+==================== */
+footer {
+  background: #111;
+  color: #eee;
+  padding: 1rem;
+  text-align: center;
+}
+footer a {
+  color: #ffc107;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ====================
+   ANIMATION ON SCROLL
+==================== */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-animate].animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ====================
+   RESPONSIVE
+==================== */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .auth-box {
+    padding: 1.5rem;
+  }
+}
+
+/* ====================
+   DASHBOARD
+==================== */
+.dashboard-container {
+  padding: 2rem;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffc107;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-container .card {
+  background: #111;
+  border: 2px solid #ffc10755;
+  border-radius: 12px;
+  color: #eee;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dashboard-container .card:hover {
+  transform: scale(1.05);
+  border-color: #ffc107;
+}
+
+.dashboard-container .card h5 {
+  color: #ffc107;
+  font-weight: 600;
+}
+
+.dashboard-container .card p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #111;
+}
+.navbar a {
+  color: #ffc107;
+}
+.navbar a:hover {
+  color: #ffeb3b;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #eee;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
